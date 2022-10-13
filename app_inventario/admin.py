@@ -15,7 +15,7 @@ class EquiposAdmin(admin.ModelAdmin):
     
 
     def entrada(self, obj):
-        return format_html('<a href="/">Entrada</a>')
+        return format_html('<a href="/equipos">Entrada</a>')
     
     def sacar(self, obj):
         return format_html('<a href="/">salida</a>')

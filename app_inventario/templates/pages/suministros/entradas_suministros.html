@@ -1,0 +1,33 @@
+{%extends 'index.html'%}
+
+{%block header%}
+     {%include 'components/header.html'%}
+{%endblock%}
+
+{%block contenido%}
+
+ <div class="container mt-3 mb-3 card" style="width: 80%; font-size: 14px">
+  <h2 class="text-center mt-3 mb-4">Entradas de Suministros</h2>
+  <form action="">
+    <div class="row justify-content-center">
+      <div class="col-5">
+        <input class="form-control" type="text" placeholder="Cantidad actual" aria-label="default input example" disabled>
+      </div>
+      <div class="col-5">
+        <input class="form-control" type="text" placeholder="Cantidad entrada" aria-label="default input example">
+      </div>
+      <div class="col-9 mt-4">
+        <textarea class="form-control" name="" id="" cols="20" rows="6" placeholder="Descripción" style="resize: none"></textarea>
+      </div>
+      <div class="row justify-content-center mt-4 mb-4">
+        <button class="btn btn-primary col-5">Enviar</button>
+      </div>
+    </div>
+  </form>
+ </div>
+
+{%endblock%}
+
+{%block footer%}
+     {% include 'components/footer.html'%}
+{%endblock%}

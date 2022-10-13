@@ -17,11 +17,21 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from app_inventario import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path("i18n/", include("django.conf.urls.i18n")),
+    path("i18n/", include("django.conf.urls.i18n")),
+    # Entradas
+    path('equipos/', views.agregarEquipos, name='equipos'),
+    path('sumistros/', views.agregarSumistros, name='sumistros'),
+    path('herramientas/', views.agregarHerramientas, name='herramientas'),
+    # Salidas
+    
+    # Dashboard
+    path('dashboardEquipos/', views.dashboardEquipos, name='dashboardEquipos'),
+    
+    
 ]
 if settings.DEBUG:
   urlpatterns +=static(
